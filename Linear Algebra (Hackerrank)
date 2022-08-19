@@ -1,0 +1,7 @@
+import numpy
+n=int(input())
+M=[]
+for i in range(n):
+    a=list(map(float,input().split()))
+    M.append(a)
+print(numpy.round(numpy.linalg.det(M),decimals=2))
