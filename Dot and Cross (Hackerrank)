@@ -1,0 +1,12 @@
+import numpy
+
+N=int(input())
+A=[]
+B=[]
+for i in range(N):
+    a = list(map(int, input().split()))
+    A.append(a)
+for i in range(N):
+    b = list(map(int, input().split()))
+    B.append(b)
+print (numpy.dot(A,B))
