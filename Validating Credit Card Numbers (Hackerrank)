@@ -1,0 +1,31 @@
+import re
+numb = re.compile(r'[4-6][0-9]{3}[-]?[0-9]{4}[-]?[0-9]{4}[-]?[0-9]{4}')
+def check1(s):
+    n=len(s)
+    ca=s[0]
+    cont=1
+    for i in range(1,n):
+        if s[i]=="-":
+            continue
+        if s[i]==ca:
+            cont+=1
+            if cont==4:
+                return False
+        else:
+            ca=s[i]
+            cont=1
+    return True
+
+def check2(s):
+    if s.count("-")==0 or s.count("-")==3:
+        return True
+    else:
+        return False
+
+N=int(input())
+for i in range(N):
+    s=input().strip()
+    if numb.match(s) and check1(s) and check2(s):
+        print ("Valid")
+    else:
+        print ("Invalid")
