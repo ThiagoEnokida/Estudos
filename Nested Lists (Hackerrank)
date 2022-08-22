@@ -6,4 +6,3 @@ if __name__ == '__main__':
         v.append([name,score])
     res=(sorted(set([score for name, score in v]))[1])
     print ('\n'.join(sorted([name for name, score in v if score == res])))
-    #'n'.join() retirado da resolução de codeworld19
